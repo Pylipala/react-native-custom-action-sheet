@@ -6,8 +6,9 @@ import { Animated, Dimensions, StyleSheet, View } from 'react-native'
 const window = Dimensions.get('window')
 
 class FadeInView extends Component {
-  getInitialState() {
-    return {
+  constructor() {
+    super()
+    this.state = {
       fadeAnim: new Animated.Value(0)
     }
   }
@@ -28,11 +29,10 @@ class FadeInView extends Component {
   }
 
   render() {
+    const { fadeAnim } = this.state
     const { backgroundColor, children } = this.props
     return (
-      <Animated.View
-        style={[styles.overlay, { opacity: this.state.fadeAnim }, { backgroundColor: backgroundColor || 'black' }]}
-      >
+      <Animated.View style={[styles.overlay, { opacity: fadeAnim }, { backgroundColor: backgroundColor || 'black' }]}>
         {children}
       </Animated.View>
     )
@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     right: 0,
     height: window.height,
     width: window.width,
-    position: 'absolute'
+    position: 'absolute',
+    zIndex: 999999
   }
 })
 

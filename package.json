@@ -4,11 +4,12 @@
   "description": "iOS custom sheet with fade in/out overlay",
   "main": "index.js",
   "scripts": {
+    "link": "sh ./scripts/link.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:eyaleizenberg/react-native-custom-action-sheet.git"
+    "url": "git@github.com:Workgrid/react-native-custom-action-sheet.git"
   },
   "keywords": [
     "react-native",
@@ -17,11 +18,14 @@
     "action sheet"
   ],
   "author": "Eyal Eizenberg <eyal.eizenberg@samanage.com> (https://github.com/eyaleizenberg)",
+  "contributors": [
+    "Chris Weed <chris@workgrid.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eyaleizenberg/react-native-custom-action-sheet/issues"
+    "url": "https://github.com/Workgrid/react-native-custom-action-sheet/issues"
   },
-  "homepage": "https://github.com/eyaleizenberg/react-native-custom-action-sheet",
+  "homepage": "https://www.workgrid.com",
   "engines": {
     "node": "^8.6.0"
   },

@@ -1,6 +1,6 @@
 {
   "name": "react-native-custom-action-sheet",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "iOS custom sheet with fade in/out overlay",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/eyaleizenberg/react-native-custom-action-sheet/issues"
   },
-  "homepage": "https://github.com/eyaleizenberg/react-native-custom-action-sheet"
+  "homepage": "https://github.com/eyaleizenberg/react-native-custom-action-sheet",
+  "engines": {
+    "node": "^8.6.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.7.4"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-native": "^0.49.5"
+  }
 }

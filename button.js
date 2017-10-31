@@ -1,22 +1,18 @@
 'use strict'
 
-var React = require('react');
-var ReactNative = require('react-native');
-var { StyleSheet, Text, TouchableOpacity, View } = ReactNative;
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-var Button = React.createClass({
-  render: function() {
-    return (
-      <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
-        <Text style={styles.buttonText}>
-          {this.props.text}
-        </Text>
-      </TouchableOpacity>
-    );
-  }
-});
+function Button({ text, onPress }) {
+  return (
+    <TouchableOpacity style={styles.button} onPress={onPress}>
+      <Text style={styles.buttonText}>{text}</Text>
+    </TouchableOpacity>
+  )
+}
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   buttonText: {
     color: '#0069d5',
     alignSelf: 'center',
@@ -32,6 +28,11 @@ var styles = StyleSheet.create({
     alignSelf: 'stretch',
     justifyContent: 'center'
   }
-});
+})
 
-module.exports = Button
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired
+}
+
+export default Button

@@ -1,32 +1,34 @@
-'use strict';
+'use strict'
 
-var React = require('react');
-var ReactNative = require('react-native');
-var Button = require('./button');
-var FadeInView = require('./fade_in_view');
-var { Modal, StyleSheet, TouchableOpacity, View } = ReactNative;
+import React, { Component } from 'react'
+import { Modal, StyleSheet, TouchableOpacity, View } from 'react-native'
+import PropTypes from 'prop-types'
+import Button from './button'
+import FadeInView from './fade_in_view'
 
-var ActionModal = React.createClass({
-  render: function() {
+class ActionModal extends Component {
+  render() {
+    const { modalVisible, backgroundColor, children, onCancel, buttonText } = this.props
+
     return (
-      <FadeInView visible={this.props.modalVisible} backgroundColor={this.props.backgroundColor}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={this.props.modalVisible}
-          onRequestClose={this.props.onCancel}>
-          <View style={styles.modalContainer}>
-            <TouchableOpacity style={styles.container} onPress={this.props.onCancel}></TouchableOpacity>
-            {this.props.children}
-            <Button onPress={this.props.onCancel} text={this.props.buttonText || "Cancel"} />
-          </View>
-        </Modal>
-      </FadeInView>
-    );
+      <View>
+        {modalVisible && (
+          <FadeInView visible={modalVisible} backgroundColor={backgroundColor}>
+            <Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={onCancel}>
+              <View style={styles.modalContainer}>
+                <TouchableOpacity style={styles.container} onPress={onCancel} />
+                {children}
+                <Button onPress={onCancel} text={buttonText || 'Cancel'} />
+              </View>
+            </Modal>
+          </FadeInView>
+        )}
+      </View>
+    )
   }
-});
+}
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1
   },
@@ -34,8 +36,15 @@ var styles = StyleSheet.create({
     flex: 1,
     padding: 8,
     paddingBottom: 0,
-    justifyContent: "flex-end"
+    justifyContent: 'flex-end'
   }
-});
+})
 
-module.exports = ActionModal;
+ActionModal.propTypes = {
+  modalVisible: PropTypes.bool.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  backgroundColor: PropTypes.string,
+  buttonText: PropTypes.string
+}
+
+export default ActionModal

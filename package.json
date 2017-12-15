@@ -27,7 +27,7 @@
   },
   "homepage": "https://www.workgrid.com",
   "engines": {
-    "node": "^8.6.0"
+    "node": ">=8.6.0"
   },
   "devDependencies": {
     "prettier": "^1.7.4"

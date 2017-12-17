@@ -31,5 +31,5 @@
   },
   "devDependencies": {
     "prettier": "^1.7.4"
-  },
+  }
 }

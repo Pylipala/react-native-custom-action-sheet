@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Workgrid/react-native-custom-action-sheet.git"
+    "url": "git@github.com:GolfPlayed/react-native-custom-action-sheet.git"
   },
   "keywords": [
     "react-native",
@@ -19,11 +19,12 @@
   ],
   "author": "Eyal Eizenberg <eyal.eizenberg@samanage.com> (https://github.com/eyaleizenberg)",
   "contributors": [
-    "Chris Weed <chris@workgrid.com>"
+    "Chris Weed <chris@workgrid.com>",
+    "Byron Rode <byron@webwiser.io>",
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Workgrid/react-native-custom-action-sheet/issues"
+    "url": "https://github.com/GolfPlayed/react-native-custom-action-sheet/issues"
   },
   "homepage": "https://www.workgrid.com",
   "engines": {

@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   button: {
-    height: 36,
+    height: 58,
     backgroundColor: 'white',
     borderColor: 'white',
     borderWidth: 1,
-    borderRadius: 6,
+    borderRadius: 12,
     marginBottom: 10,
     alignSelf: 'stretch',
     justifyContent: 'center'

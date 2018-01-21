@@ -32,7 +32,7 @@ class FadeInView extends Component {
     const { fadeAnim } = this.state
     const { backgroundColor, children } = this.props
     return (
-      <Animated.View style={[styles.overlay, { opacity: fadeAnim }, { backgroundColor: backgroundColor || 'black' }]}>
+      <Animated.View style={[styles.overlay, { opacity: fadeAnim }, { backgroundColor: backgroundColor || 'black' } ]}>
         {children}
       </Animated.View>
     )
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     height: window.height,
     width: window.width,
     position: 'absolute',
-    zIndex: 999999
+    zIndex: 999999,
   }
 })
 

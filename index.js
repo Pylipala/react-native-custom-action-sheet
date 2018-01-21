@@ -14,7 +14,7 @@ class ActionModal extends Component {
       <View>
         {modalVisible && (
           <FadeInView visible={modalVisible} backgroundColor={backgroundColor}>
-            <Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={onCancel}>
+            <Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={onCancel} backdropColor={'rgba(0,0,0,0.75)'}>
               <View style={styles.modalContainer}>
                 <TouchableOpacity style={styles.container} onPress={onCancel} />
                 {children}
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   modalContainer: {
     flex: 1,
-    padding: 8,
+    padding: 10,
     paddingBottom: 0,
     justifyContent: 'flex-end'
   }

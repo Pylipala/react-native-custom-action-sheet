@@ -1,35 +1,68 @@
 {
-  "name": "react-native-custom-action-sheet",
-  "version": "0.0.12",
+  "_from": "github:GolfPlayed/react-native-custom-action-sheet",
+  "_id": "react-native-custom-action-sheet@0.0.12",
+  "_inBundle": false,
+  "_location": "/react-native-custom-action-sheet",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-custom-action-sheet@github:GolfPlayed/react-native-custom-action-sheet",
+    "name": "react-native-custom-action-sheet",
+    "escapedName": "react-native-custom-action-sheet",
+    "rawSpec": "github:GolfPlayed/react-native-custom-action-sheet",
+    "saveSpec": "github:GolfPlayed/react-native-custom-action-sheet",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:GolfPlayed/react-native-custom-action-sheet#9672afeb400d803f618c0957d59df246f297ef06",
+  "_spec": "react-native-custom-action-sheet@github:GolfPlayed/react-native-custom-action-sheet",
+  "_where": "/Users/tylerfraser/Develop/react-native-app",
+  "author": {
+    "name": "Eyal Eizenberg",
+    "email": "eyal.eizenberg@samanage.com",
+    "url": "https://github.com/eyaleizenberg"
+  },
+  "bugs": {
+    "url": "https://github.com/GolfPlayed/react-native-custom-action-sheet/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Chris Weed",
+      "email": "chris@workgrid.com"
+    },
+    {
+      "name": "Byron Rode",
+      "email": "byron@webwiser.io"
+    }
+  ],
+  "deprecated": false,
   "description": "iOS custom sheet with fade in/out overlay",
-  "main": "index.js",
-  "scripts": {
-    "link": "sh ./scripts/link.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "prettier": "^1.7.4"
   },
-  "repository": {
-    "url": "https://github.com/GolfPlayed/react-native-custom-action-sheet.git"
+  "engines": {
+    "node": ">=8.6.0"
   },
+  "homepage": "https://www.workgrid.com",
   "keywords": [
     "react-native",
     "react-component",
     "ios",
     "action sheet"
   ],
-  "author": "Eyal Eizenberg <eyal.eizenberg@samanage.com> (https://github.com/eyaleizenberg)",
-  "contributors": [
-    "Chris Weed <chris@workgrid.com>",
-    "Byron Rode <byron@webwiser.io>"
-  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GolfPlayed/react-native-custom-action-sheet/issues"
+  "main": "index.js",
+  "name": "react-native-custom-action-sheet",
+  "repository": {
+    "url": "git+https://github.com/GolfPlayed/react-native-custom-action-sheet.git"
   },
-  "homepage": "https://www.workgrid.com",
-  "engines": {
-    "node": ">=8.6.0"
+  "scripts": {
+    "link": "sh ./scripts/link.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "prettier": "^1.7.4"
-  }
+  "version": "0.0.12"
 }

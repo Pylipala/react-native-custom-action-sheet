@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     padding: 8,
     paddingBottom: 20,
     justifyContent: 'flex-end',
-    // top: window.height,
   },
 });
 

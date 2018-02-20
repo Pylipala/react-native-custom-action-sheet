@@ -1,22 +1,24 @@
-'use strict'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text, TouchableOpacity, Platform, Dimensions } from 'react-native';
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+const { height: deviceHeight, width: deviceWidth } = Dimensions.get('window');
+const isIphoneX = Platform.OS === 'ios' && (deviceHeight === 812 || deviceWidth === 812);
+const buttonBottomMargin = isIphoneX ? 12 : 10;
 
 function Button({ text, onPress }) {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   buttonText: {
     color: '#0069d5',
     alignSelf: 'center',
-    fontSize: 18
+    fontSize: 18,
   },
   button: {
     height: 58,
@@ -24,15 +26,15 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     borderWidth: 1,
     borderRadius: 12,
-    marginBottom: 10,
+    marginBottom: buttonBottomMargin,
     alignSelf: 'stretch',
-    justifyContent: 'center'
-  }
-})
+    justifyContent: 'center',
+  },
+});
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  onPress: PropTypes.func.isRequired
-}
+  onPress: PropTypes.func.isRequired,
+};
 
-export default Button
+export default Button;

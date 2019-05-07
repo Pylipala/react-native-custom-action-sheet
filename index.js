@@ -9,7 +9,7 @@ const window = Dimensions.get('window');
 class ActionModal extends Component {
     render() {
         const {
-            modalVisible, backgroundColor, children, onCancel, buttonText,
+            modalVisible, backgroundColor, children, onCancel, buttonText, onDismiss,
         } = this.props;
 
         return (
@@ -22,6 +22,7 @@ class ActionModal extends Component {
                           transparent
                           visible={modalVisible}
                           onRequestClose={onCancel}
+                          onDismiss={onDismiss}
                       >
                         <View style={styles.modalContainer}>
                           <TouchableOpacity style={styles.container} onPress={onCancel} />

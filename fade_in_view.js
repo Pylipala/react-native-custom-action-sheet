@@ -22,7 +22,7 @@ class FadeInView extends Component {
 
   _animate(newProps) {
     return Animated.timing(this.state.fadeAnim, {
-      toValue: newProps.visible ? 0.7 : 0,
+      toValue: newProps.visible ? 0.3 : 0,
       duration: 300,
     }).start();
   }
